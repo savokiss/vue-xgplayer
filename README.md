@@ -1,2 +1,2 @@
 # vue-xgplayer
-xgplayer with vue intergration
+xgplayer with vue integration
