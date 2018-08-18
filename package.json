@@ -1,0 +1,25 @@
+{
+  "name": "vue-xgplayer",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "vue-cli-service serve examples/main.js",
+    "build": "vue-cli-service build --target lib --name vue-xgplayer src/index.js",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^2.5.17",
+    "xgplayer": "^1.0.8"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0",
+    "@vue/cli-plugin-eslint": "^3.0.0",
+    "@vue/cli-service": "^3.0.0",
+    "@vue/eslint-config-standard": "^3.0.1",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
