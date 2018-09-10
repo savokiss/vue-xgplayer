@@ -1,6 +1,6 @@
 {
   "name": "vue-xgplayer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "serve": "vue-cli-service serve examples/main.js",
     "eg:build": "vue-cli-service build examples/main.js --dest docs",
