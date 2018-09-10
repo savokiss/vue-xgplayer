@@ -34,7 +34,7 @@ export default {
     init () {
       this.player = new Player({
         id: this.id,
-        ...Object.assign({}, defaultOptions, this.options, {
+        ...Object.assign({}, defaultOptions, this.globalOptions, this.options, {
           id: this.id
         })
       })

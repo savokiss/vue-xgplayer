@@ -1,5 +1,5 @@
 # vue-xgplayer
-[![npm (scoped with tag)](https://img.shields.io/npm/v/vue-xgplayer.svg)](https://npmjs.com/package/vue-xgplayer)
+[![npm (tag)](https://img.shields.io/npm/v/vue-xgplayer.svg)](https://npmjs.com/package/vue-xgplayer)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 [![dependencies](https://img.shields.io/david/savokiss/vue-xgplayer.svg)]()
 
@@ -16,7 +16,9 @@ npm i vue-xgplayer -S
 import Vue from 'vue'
 import VueXgplayer from 'vue-xgplayer'
 
-Vue.use(VueXgplayer)
+Vue.use(VueXgplayer, {
+  // globalOptions
+})
 ```
 
 ```vue
