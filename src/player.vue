@@ -1,9 +1,10 @@
 <template>
-  <div class="vue-xgplayer" :id="options.id" ref="player" v-show="visible"></div>
+  <div class="vue-xgplayer" :id="id" ref="player"></div>
 </template>
 
 <script>
 import Player from 'xgplayer'
+import nanoid from 'nanoid'
 
 const defaultOptions = {
   // playsinline: true
@@ -13,19 +14,29 @@ const defaultOptions = {
 export default {
   name: 'xgplayer',
   props: {
+    id: {
+      type: String,
+      default: nanoid(10)
+    },
+    globalOptions: {
+      type: Object,
+      default: () => {}
+    },
     options: {
       type: Object,
       default: () => defaultOptions
     }
   },
   data () {
-    return {
-    }
+    return {}
   },
   methods: {
     init () {
       this.player = new Player({
-        ...Object.assign({}, defaultOptions, this.options)
+        id: this.id,
+        ...Object.assign({}, defaultOptions, this.options, {
+          id: this.id
+        })
       })
     }
   },
@@ -34,8 +45,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.vue-xgplayer {
-}
-</style>

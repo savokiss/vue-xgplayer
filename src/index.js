@@ -1,7 +1,10 @@
 import XgPlayer from './player.vue'
 
 const install = function (Vue, options) {
-  Vue.component('vue-xgplayer', XgPlayer)
+  if (options) {
+    XgPlayer.props.globalOptions.default = () => options
+  }
+  Vue.component(XgPlayer.name, XgPlayer)
 }
 
 export default XgPlayer

@@ -7,8 +7,8 @@
       </a>
     </div>
     <h3>Vue xgplayer</h3>
-    <div class="container">
-      <player :options="playerOptions"></player>
+    <div class="container mt-5">
+      <player class="xgplayer" :options="playerOptions"></player>
     </div>
   </div>
 </template>
@@ -21,7 +21,6 @@ export default {
   data () {
     return {
       playerOptions: {
-        id: 'xgplayer',
         url: 'https://h5player.bytedance.com/video/mp4/xgplayer-demo-360p.mp4'
       }
     }
@@ -42,7 +41,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.vue-xgplayer {
+.xgplayer {
   margin: 0 auto;
 }
 </style>

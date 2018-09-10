@@ -1,2 +1,45 @@
 # vue-xgplayer
-xgplayer with vue integration
+[![npm (scoped with tag)](https://img.shields.io/npm/v/vue-xgplayer.svg)](https://npmjs.com/package/vue-xgplayer)
+[![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![dependencies](https://img.shields.io/david/savokiss/vue-xgplayer.svg)]()
+
+xgplayer vue component
+
+## Install
+```bash
+npm i vue-xgplayer
+```
+
+## Usage
+```js
+// main.js
+import Vue from 'vue'
+import VueXgplayer from 'vue-xgplayer'
+
+Vue.use(VueXgplayer)
+```
+
+```vue
+// YourComponent.vue
+<template>
+  <xgplayer :options="playerOptions"></xgplayer>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      playerOptions: {
+        url: 'https://h5player.bytedance.com/video/mp4/xgplayer-demo-360p.mp4'
+      }
+    }
+  }
+}
+</script>
+```
+
+## Related Projects
+- [xgplayer](https://github.com/bytedance/xgplayer)
+
+## License
+MIT

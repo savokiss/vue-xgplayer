@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "scripts": {
     "serve": "vue-cli-service serve examples/main.js",
+    "eg:build": "vue-cli-service build examples/main.js --dest docs",
     "build": "vue-cli-service build --target lib --name vue-xgplayer src/index.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "dist/vue-xgplayer.umd.js",
+  "module": "dist/vue-xgplayer.common.js",
   "dependencies": {
+    "nanoid": "^1.2.3",
     "vue": "^2.5.17",
-    "xgplayer": "^1.0.8"
+    "xgplayer": "^1.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",
