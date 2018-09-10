@@ -804,7 +804,7 @@ var setPublicPath = __webpack_require__("1eb2");
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es6.function.name.js
 var es6_function_name = __webpack_require__("7f7f");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"0595ba96-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/player.vue?vue&type=template&id=1f4d6cbd&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"db82b1c6-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/player.vue?vue&type=template&id=1f4d6cbd&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"player",staticClass:"vue-xgplayer",attrs:{"id":_vm.id}})}
 var staticRenderFns = []
 
@@ -1035,11 +1035,13 @@ var src_install = function install(Vue, options) {
   Vue.component(player.name, player);
 };
 
-/* harmony default export */ var src = (player);
+/* harmony default export */ var src = ({
+  install: src_install
+});
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
-/* concated harmony reexport install */__webpack_require__.d(__webpack_exports__, "install", function() { return src_install; });
-/* concated harmony reexport XgPlayer */__webpack_require__.d(__webpack_exports__, "XgPlayer", function() { return player; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "install", function() { return src_install; });
+/* concated harmony reexport */__webpack_require__.d(__webpack_exports__, "XgPlayer", function() { return player; });
 
 
 /* harmony default export */ var entry_lib = __webpack_exports__["default"] = (src);
