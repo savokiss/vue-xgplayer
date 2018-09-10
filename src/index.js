@@ -7,6 +7,8 @@ const install = function (Vue, options) {
   Vue.component(XgPlayer.name, XgPlayer)
 }
 
-export default XgPlayer
+export default {
+  install
+}
 
 export { install, XgPlayer }
