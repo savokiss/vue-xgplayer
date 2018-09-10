@@ -5,9 +5,9 @@
 
 xgplayer vue component
 
-## Install
+## Installation
 ```bash
-npm i vue-xgplayer
+npm i vue-xgplayer -S
 ```
 
 ## Usage
