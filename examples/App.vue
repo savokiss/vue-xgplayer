@@ -20,7 +20,8 @@ export default {
   data () {
     return {
       playerOptions: {
-        url: 'https://h5player.bytedance.com/video/mp4/xgplayer-demo-360p.mp4'
+        url: 'https://h5player.bytedance.com/video/mp4/xgplayer-demo-360p.mp4',
+        poster: '//s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/poster.jpg'
       }
     }
   }

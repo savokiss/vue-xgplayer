@@ -40,6 +40,10 @@ export default {
 </script>
 ```
 
+## Examples
+
+<https://github.com/savokiss/vue-xgplayer/blob/master/examples/App.vue>
+
 ## Related Projects
 - [xgplayer](https://github.com/bytedance/xgplayer)
 
