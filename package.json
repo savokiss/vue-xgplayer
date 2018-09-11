@@ -1,6 +1,6 @@
 {
   "name": "vue-xgplayer",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "scripts": {
     "serve": "cross-env DOC_ENV=development vue-cli-service serve examples/main.js",
     "docs:build": "cross-env DOC_ENV=production vue-cli-service build examples/main.js --dest docs",
