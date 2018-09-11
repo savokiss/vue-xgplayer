@@ -8,13 +8,12 @@
     </div>
     <h3>Vue xgplayer</h3>
     <div class="container mt-5">
-      <player class="xgplayer" :options="playerOptions"></player>
+      <xgplayer class="xgplayer" :options="playerOptions"></xgplayer>
     </div>
   </div>
 </template>
 
 <script>
-import player from '../src/player'
 
 export default {
   name: 'app',
@@ -24,9 +23,6 @@ export default {
         url: 'https://h5player.bytedance.com/video/mp4/xgplayer-demo-360p.mp4'
       }
     }
-  },
-  components: {
-    player
   }
 }
 </script>

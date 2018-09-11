@@ -4,7 +4,7 @@
 
 <script>
 import Player from 'xgplayer'
-import nanoid from 'nanoid'
+import { genId } from './utils'
 
 const defaultOptions = {
   // playsinline: true
@@ -16,7 +16,7 @@ export default {
   props: {
     id: {
       type: String,
-      default: nanoid(10)
+      default: () => 'xgplayer_' + genId()
     },
     globalOptions: {
       type: Object,
@@ -38,10 +38,16 @@ export default {
           id: this.id
         })
       })
+    },
+    destroy () {
+      this.player.destory()
     }
   },
   mounted () {
     this.init()
+  },
+  beforeDestroy () {
+    this.destory()
   }
 }
 </script>
