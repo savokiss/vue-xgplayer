@@ -4,3 +4,9 @@
 
 ## v0.1.2
 - support globalOptions
+
+## v0.2.0
+- generate valid css selector
+
+## v0.2.1
+- nanoid/generate as external

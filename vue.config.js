@@ -7,7 +7,7 @@ module.exports = {
     if (!isDoc) {
       config.externals = {
         xgplayer: 'xgplayer',
-        nanoid: 'nanoid'
+        'nanoid/generate': 'nanoid/generate'
       }
     }
   }
