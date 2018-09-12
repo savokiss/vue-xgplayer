@@ -15,5 +15,9 @@
 - fix destroy method typo
 
 ## v0.3.0
-## Features
+### Features
 - noDestroy for v-if usecase
+
+## v0.4.0
+### Feature
+- responsive by aspect prop

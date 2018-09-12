@@ -5,6 +5,8 @@
 <script>
 import Player from 'xgplayer'
 import { genId } from './utils'
+import _assign from 'lodash/assign'
+import _debounce from 'lodash/debounce'
 
 const defaultOptions = {
   // playsinline: true
@@ -29,6 +31,14 @@ export default {
     noDestroy: {
       type: Boolean,
       default: false
+    },
+    aspect: {
+      type: String,
+      default: '16by9' // 16by9|21by9|4by3|1by1
+    },
+    autoHeightDebounce: {
+      type: Number,
+      default: 250
     }
   },
   data () {
@@ -36,21 +46,43 @@ export default {
       player: null
     }
   },
+  computed: {
+    aspectRatio () {
+      let aspectArr = this.aspect.split('by')
+      if (aspectArr.length !== 2) {
+        return 16 / 9
+      }
+      return aspectArr[0] / aspectArr[1]
+    }
+  },
   methods: {
     init () {
       this.player = new Player({
         id: this.id,
-        ...Object.assign({}, defaultOptions, this.globalOptions, this.options, {
+        ..._assign({}, defaultOptions, this.globalOptions, this.options, {
           id: this.id
         })
       })
     },
     destroy () {
       this.player && this.player.destroy()
+    },
+    _updateHeight () {
+      if (this.$refs.player) {
+        let height = Math.floor(this.$refs.player.offsetWidth * 1 / this.aspectRatio) + 'px'
+        this.$refs.player.style.height = height
+      }
+    },
+    autoResize () {
+      this._updateHeight()
+      window.addEventListener('resize', _debounce(this._updateHeight.bind(this), this.autoHeightDebounce))
     }
   },
   mounted () {
     this.init()
+    setTimeout(() => { // hack
+      this.autoResize()
+    })
   },
   destroyed () {
     !this.noDestroy && this.destroy()
