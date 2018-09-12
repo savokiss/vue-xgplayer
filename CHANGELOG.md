@@ -13,3 +13,7 @@
 
 ## v0.2.4
 - fix destroy method typo
+
+## v0.3.0
+## Features
+- noDestroy for v-if usecase

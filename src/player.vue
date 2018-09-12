@@ -25,10 +25,16 @@ export default {
     options: {
       type: Object,
       default: () => defaultOptions
+    },
+    noDestroy: {
+      type: Boolean,
+      default: false
     }
   },
   data () {
-    return {}
+    return {
+      player: null
+    }
   },
   methods: {
     init () {
@@ -40,14 +46,14 @@ export default {
       })
     },
     destroy () {
-      this.player.destroy()
+      this.player && this.player.destroy()
     }
   },
   mounted () {
     this.init()
   },
-  beforeDestroy () {
-    this.destroy()
+  destroyed () {
+    !this.noDestroy && this.destroy()
   }
 }
 </script>
