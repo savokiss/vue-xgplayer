@@ -10,3 +10,6 @@
 
 ## v0.2.1
 - nanoid/generate as external
+
+## v0.2.2
+- fix destroy method typo
