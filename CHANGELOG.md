@@ -11,5 +11,5 @@
 ## v0.2.1
 - nanoid/generate as external
 
-## v0.2.3
+## v0.2.4
 - fix destroy method typo

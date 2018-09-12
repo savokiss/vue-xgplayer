@@ -40,7 +40,7 @@ export default {
       })
     },
     destroy () {
-      this.player.destory()
+      this.player.destroy()
     }
   },
   mounted () {
