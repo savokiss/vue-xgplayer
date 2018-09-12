@@ -47,7 +47,7 @@ export default {
     this.init()
   },
   beforeDestroy () {
-    this.destory()
+    this.destroy()
   }
 }
 </script>
