@@ -7,6 +7,7 @@ import Player from 'xgplayer'
 import { genId } from './utils'
 import _assign from 'lodash/assign'
 import _debounce from 'lodash/debounce'
+import _split from 'lodash/split'
 
 const defaultOptions = {
   // playsinline: true
@@ -48,7 +49,7 @@ export default {
   },
   computed: {
     aspectRatio () {
-      let aspectArr = this.aspect.split('by')
+      let aspectArr = _split(this.aspect, 'by')
       if (aspectArr.length !== 2) {
         return 16 / 9
       }

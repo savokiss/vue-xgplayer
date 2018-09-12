@@ -7,7 +7,10 @@ module.exports = {
     if (!isDoc) {
       config.externals = {
         xgplayer: 'xgplayer',
-        'nanoid/generate': 'nanoid/generate'
+        'nanoid/generate': 'nanoid/generate',
+        'lodash/assign': 'lodash/assign',
+        'lodash/debounce': 'lodash/debounce',
+        'lodash/split': 'lodash/split'
       }
     }
   }
