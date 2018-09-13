@@ -21,3 +21,7 @@
 ## v0.4.0
 ### Feature
 - responsive by aspect prop
+
+## v0.4.1
+### Fixes
+- reduce bundle size by `useBuiltIns: false` && remove spread

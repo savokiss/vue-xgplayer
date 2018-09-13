@@ -58,15 +58,17 @@ export default {
   },
   methods: {
     init () {
-      this.player = new Player({
-        id: this.id,
-        ..._assign({}, defaultOptions, this.globalOptions, this.options, {
+      this.player = new Player(
+        _assign({}, defaultOptions, this.globalOptions, this.options, {
           id: this.id
         })
-      })
+      )
     },
     destroy () {
       this.player && this.player.destroy()
+    },
+    reload () {
+      this.player && this.player.reload()
     },
     _updateHeight () {
       if (this.$refs.player) {
