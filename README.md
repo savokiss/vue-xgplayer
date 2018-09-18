@@ -57,7 +57,7 @@ export default {
 | id  | `String` | `xgplayer_${random()}` | Optional. The dom id |
 | options  | `Object` | `{}` | The url property is required.   |
 | aspect  | `String` | `'16by9'` | Optional. Aspect ratio for auto resize video height.  |
-| noDestroy  | `Boolean` | `false` | Optional. Not destry player when component destroy |
+| noDestroy  | `Boolean` | `false` | Optional. Wont destroy player when component destroy |
 
 
 ## Methods
