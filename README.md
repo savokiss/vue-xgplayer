@@ -18,6 +18,12 @@ import VueXgplayer from 'vue-xgplayer'
 
 Vue.use(VueXgplayer, {
   // globalOptions
+  enterLogo: {
+    url: '/images/video-player-loading.png',
+    width: 100,
+    height: 40
+  },
+  playsinline: true
 })
 ```
 
@@ -32,7 +38,8 @@ export default {
   data () {
     return {
       playerOptions: {
-        url: 'https://h5player.bytedance.com/video/mp4/xgplayer-demo-360p.mp4'
+        url: 'https://h5player.bytedance.com/video/mp4/xgplayer-demo-360p.mp4',
+        width: '100%' // Depends on its wrapper element.
       }
     }
   }
@@ -43,6 +50,22 @@ export default {
 ## Examples
 
 <https://github.com/savokiss/vue-xgplayer/blob/master/examples/App.vue>
+
+## Props
+| Prop  | Type | Default  | Info |
+| ------------- | ------------- | ------------- | ------------- |
+| id  | `String` | `xgplayer_${random()}` | Optional. The dom id |
+| options  | `Object` | `{}` | The url property is required.   |
+| aspect  | `String` | `'16by9'` | Optional. Aspect ratio for auto resize video height.  |
+| noDestroy  | `Boolean` | `false` | Optional. Not destry player when component destroy |
+
+
+## Methods
+
+| Method | Info |
+| ------- | ------------- |
+| reload | Will call player.reload() |
+| destroy | Will call player.destroy() |
 
 ## Related Projects
 - [xgplayer](https://github.com/bytedance/xgplayer)
