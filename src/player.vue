@@ -44,7 +44,8 @@ export default {
   },
   data () {
     return {
-      player: null
+      player: null,
+      debounceCallback: null
     }
   },
   computed: {
@@ -78,7 +79,8 @@ export default {
     },
     autoResize () {
       this._updateHeight()
-      window.addEventListener('resize', _debounce(this._updateHeight.bind(this), this.autoHeightDebounce))
+      this.debounceCallback = _debounce(this._updateHeight.bind(this), this.autoHeightDebounce)
+      window.addEventListener('resize', this.debounceCallback)
     }
   },
   mounted () {
@@ -87,7 +89,8 @@ export default {
       this.autoResize()
     })
   },
-  destroyed () {
+  beforeDestroy () {
+    window.removeEventListener('resize', this.debounceCallback)
     !this.noDestroy && this.destroy()
   }
 }

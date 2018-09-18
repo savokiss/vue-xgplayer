@@ -25,3 +25,7 @@
 ## v0.4.1
 ### Fixes
 - reduce bundle size by `useBuiltIns: false` && remove spread
+
+## v0.4.2
+### Fixes
+- remove resize listener when destroy

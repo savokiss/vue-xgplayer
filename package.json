@@ -13,7 +13,7 @@
     "lodash": "^4.17.10",
     "nanoid": "^1.2.3",
     "vue": "^2.5.17",
-    "xgplayer": "^1.1.0"
+    "xgplayer": "^1.1.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",

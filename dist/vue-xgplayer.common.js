@@ -146,12 +146,12 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 var setPublicPath = __webpack_require__("1eb2");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4cd02416-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/player.vue?vue&type=template&id=27bd7c52&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4cd02416-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/player.vue?vue&type=template&id=ab62ff38&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"player",staticClass:"vue-xgplayer",attrs:{"id":_vm.id}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/player.vue?vue&type=template&id=27bd7c52&
+// CONCATENATED MODULE: ./src/player.vue?vue&type=template&id=ab62ff38&
 
 // EXTERNAL MODULE: external "xgplayer"
 var external_xgplayer_ = __webpack_require__("5de4");
@@ -229,7 +229,8 @@ var defaultOptions = {// playsinline: true
   },
   data: function data() {
     return {
-      player: null
+      player: null,
+      debounceCallback: null
     };
   },
   computed: {
@@ -264,7 +265,8 @@ var defaultOptions = {// playsinline: true
     autoResize: function autoResize() {
       this._updateHeight();
 
-      window.addEventListener('resize', debounce_default()(this._updateHeight.bind(this), this.autoHeightDebounce));
+      this.debounceCallback = debounce_default()(this._updateHeight.bind(this), this.autoHeightDebounce);
+      window.addEventListener('resize', this.debounceCallback);
     }
   },
   mounted: function mounted() {
@@ -276,7 +278,8 @@ var defaultOptions = {// playsinline: true
       _this.autoResize();
     });
   },
-  destroyed: function destroyed() {
+  beforeDestroy: function beforeDestroy() {
+    window.removeEventListener('resize', this.debounceCallback);
     !this.noDestroy && this.destroy();
   }
 });
