@@ -10,7 +10,7 @@
   "main": "dist/vue-xgplayer.umd.js",
   "module": "dist/vue-xgplayer.common.js",
   "dependencies": {
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "nanoid": "^1.2.3",
     "vue": "^2.5.17",
     "xgplayer": "^1.1.1"
